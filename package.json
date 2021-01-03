@@ -1,0 +1,32 @@
+{
+  "name": "NASA-NodeServer",
+  "version": "1.0.0",
+  "description": "This is a complete webpage with JS, HTML, CSS, and NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "nodemon server.js",
+    "pro": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlidaSchefers/NASA-NodeServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlidaSchefers/NASA-NodeServer/issues"
+  },
+  "homepage": "https://github.com/AlidaSchefers/NASA-NodeServer#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
