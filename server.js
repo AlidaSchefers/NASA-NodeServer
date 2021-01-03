@@ -4,7 +4,7 @@ const path = require('path')
 const PORT = 3000
 
 const app = express()
-app.use('static', express.static('public'))
+app.use('/static', express.static('public')) //the connection issue b/w the index.html and index.js files was the missing slash before the word static
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/index.html'))
     // res.sendFile('./public/index.html')
