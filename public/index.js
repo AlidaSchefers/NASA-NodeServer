@@ -55,11 +55,9 @@ originalAPODLink.style.color = "blue"
 document.body.style.backgroundColor = "black"
 mainContainer.style.textAlign = "center"
 
-const myKey = "TO_BE_INSERTED_LATER"
-
 btn.onclick = function() {
     const xhr = new XMLHttpRequest()
-        xhr.open("GET", `https://api.nasa.gov/planetary/apod?api_key=${myKey}&date=${dateInput.value}`)
+        xhr.open("POST", `http://localhost:3000/bydate/${dateInput.value}`) //updates
         xhr.onload = () => { //define what to do once request sent back to user/received
 
             const rawResponse = xhr.responseText //returns as a DOMString... this has a JSON format (looks like a JSON) but it's just a string, not a JSON
