@@ -2,6 +2,7 @@
 
 //initialize
 const mainContainer = document.createElement('div');
+const nasaLogo = document.createElement('img')
 const title = document.createElement('div')
 title.innerText = "Welcome to NASA's APOD"
 const btn = document.createElement('BUTTON');
@@ -13,6 +14,8 @@ const originalAPODLink = document.createElement('a')
 
 
     //props
+nasaLogo.src = "publicpath/NASA-logo.png"
+nasaLogo.width = 100
 let officialSource = "Click here to go to NASA's official APOD website."
 originalAPODLink.href = 'https://apod.nasa.gov/';
 originalAPODLink.innerText = officialSource;
@@ -27,6 +30,7 @@ dateInput.min = '2015-01-01' //the first APOD
 
     //append
 document.body.appendChild(mainContainer);
+mainContainer.appendChild(nasaLogo)
 mainContainer.appendChild(title);
 mainContainer.appendChild(dateInput);
 mainContainer.appendChild(document.createElement("br"))
