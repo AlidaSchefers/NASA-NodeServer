@@ -5,8 +5,8 @@ const { default: axios } = require('axios')
 
 const PORT = 3000
 const myKey = process.env.NASA_API_KEY
-
 const server = express()
+const aboutPageRoute = require("./route/aboutpage.js")
 
 //express.json //would allow you to accept info as JSON. use as a middleware.
 //need to parse incoming data to read it. set a standard yourself and expect client side to use that format. 
@@ -17,7 +17,7 @@ const nasaEndPoint = 'https://api.nasa.gov/planetary/apod'
 //remember to put middlewares first. 
 server.use('/publicpath', express.static('public')) //the connection issue b/w the index.html and index.js files was the missing slash before the word static
 server.use(cors())
-
+server.use("/aboutpage", aboutPageRoute)
 
 
 server.get('/', function(req, res) {
